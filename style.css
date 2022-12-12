@@ -1,0 +1,481 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Asap", sans-serif;
+}
+
+body{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+}
+
+.main{
+    width: 90%;
+    margin: auto;
+}
+
+.searchBar{
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: black;
+    opacity: 0.85;
+    padding: 18px;
+    border-radius: 20px;
+
+}
+
+.searchForm{
+    display: flex;
+    justify-content: space-between;
+}
+
+.searchForm i{
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.searchForm input{
+    width: 70%;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 22px;
+}
+
+.searchForm input::placeholder{
+    color: white;
+}
+
+.weather{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+
+.weatherCity{
+    margin: auto;
+}
+
+.weatherCity .mainTown{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 0 0 20px 0;
+}
+
+.infoCity{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+}
+
+.mainTown h1{
+    font-size: 50px;
+    color: white;
+    text-shadow: black 1px 0 10px;
+}
+
+.mainTown .country{
+    font-size: 40px;
+    text-shadow: black 1px 0 10px;
+    color: white;
+}
+
+.mainTown h4{
+    font-size: 40px;
+    color: white;
+    text-shadow: black 1px 0 10px;
+}
+
+.weatherInfo{
+    margin: 20px 0;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.weatherInfo .mainWeather{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: black;
+    opacity: 0.85;
+    padding: 20px 15px;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.mainWeather .imgWeather{
+    width: 100px;
+}
+
+.infoElement{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.infoElement .grades{
+    font-size: 30px;
+}
+
+.tempMinMax{
+    display: flex;
+    flex-direction: column;
+    justify-content: inherit;
+    gap: 15px;
+}
+
+.elTempMin,
+.elTempMax{
+    width: 100px;
+    text-align: center;
+    background-color: black;
+    opacity: 0.85;
+    padding: 12px;
+    border-radius: 20px;
+    align-items: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tempMin,
+.tempMax,
+.minGrades,
+.maxGrades{
+    font-size: 20px;
+}
+
+.pressureHumiditySpeed{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.humidityContainer,
+.pressureContainer,
+.speedContainer{
+    width: 100px;
+    text-align: center;
+    background-color: black;
+    opacity: 0.85;
+    padding: 12px;
+    border-radius: 20px;
+    align-items: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.humidity,
+.pressure,
+.speed,
+.humidityVal,
+.pressureVal,
+.speedVal{
+    font-size: 20px;
+}
+
+.forecast{
+    margin: 40px 0;
+}
+
+.forecast h4{
+    color: white;
+    font-size: 27px;
+    text-shadow: black 1px 0 10px;
+}
+
+.forecast .containerForecast{
+    display: flex;
+    margin: 20px 0;
+    overflow-x: hidden;
+    overflow-x: scroll;
+    gap: 20px;
+}
+
+.containerForecast::-webkit-scrollbar{
+    background-color: transparent;
+    height: 10px;
+}
+
+.containerForecast::-webkit-scrollbar-track-piece {
+    background-color: transparent;
+}
+
+.containerForecast::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.774);
+    border-radius: 10px;
+}
+
+.containerForecast .containerDayForecast{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    opacity: 0.85;
+    padding: 15px 20px;
+    border-radius: 20px;
+    align-items: center;
+    color: white;
+    margin-bottom: 15px;
+    text-align: center;
+    justify-content: center;
+    justify-content: space-around;
+    gap: 8px;
+}
+
+.containerDayForecast .dayForecast{
+    font-size: 25px;
+}
+
+.containerDayForecast .imgDayForecast{
+    width: 75px;
+}
+
+.containerDayForecast .gradesDayForecast{
+    font-size: 27px;
+    width: 70px;
+}
+
+.modal{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding: 20px 20px 0 20px;
+    background-color: black;
+  
+    border-radius: 20px;
+}
+
+.modal p{
+    color: white;
+    font-size: 30px;
+}
+
+.modal img{
+   width: 300px;
+   opacity: 1;
+}
+
+/*
+footer{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}*/
+
+@media screen and (min-width: 768px and max-width:1199) {
+
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 383px;
+    }
+    
+    .main {
+        width: 750px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .searchBar {
+        width: 350px;
+        display: flex;
+        justify-content: center;
+        justify-content: none;
+    }
+
+    .weatherInfo{
+        width: 500px;
+        margin: auto;
+        justify-content: center;
+    }
+
+    .weatherInfo .mainWeather {
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        background-color: black;
+        opacity: 0.85;
+        padding: 20px 15px;
+        border-radius: 20px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .tempMinMax {
+        width: 125px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-content: space-between;
+        align-items: center;
+        align-items: flex-end;
+        gap: 0;
+    }
+
+    .pressureHumiditySpeed {
+        width: 330px;
+        display: flex;
+        justify-content: center;
+        justify-content: space-between;
+        align-items: center;
+        justify-content: none;
+        margin-top: 20px;
+    }
+
+    .forecast{
+        width: 650px;
+        margin: auto;
+        margin-top: 30px;
+        overflow-x: hidden;
+    }
+
+    .forecast .containerForecast{
+        display: flex;
+        margin: 20px 0;
+        gap: 20px;
+        
+    }
+
+    /*footer{
+        width: 100%;
+    }*/
+
+}
+@media screen and (min-width: 1280px) {
+    
+    .main {
+        width: 1200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .searchBar {
+        width: 350px;
+        display: flex;
+        justify-content: center;
+        justify-content: none;
+    }
+
+    .weatherInfo{
+        width: 500px;
+        margin: auto;
+        justify-content: center;
+    }
+
+    .weatherInfo .mainWeather {
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        background-color: black;
+        opacity: 0.85;
+        padding: 20px 15px;
+        border-radius: 20px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .tempMinMax {
+        width: 125px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-content: space-between;
+        align-items: center;
+        align-items: flex-end;
+        gap: 0;
+    }
+
+    .pressureHumiditySpeed {
+        width: 330px;
+        display: flex;
+        justify-content: center;
+        justify-content: space-between;
+        align-items: center;
+        justify-content: none;
+        margin-top: 20px;
+    }
+
+    .forecast{
+        margin: auto;
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .forecast h4{
+        width: inherit;
+        display: flex;
+        margin: 20px 0;
+        gap: 20px;
+        align-self: flex-start;
+        
+    }
+
+    .forecast .containerForecast{
+        width: inherit;
+        display: flex;
+        margin: 20px 0;
+        gap: 20px;
+        
+    }
+
+    .modal{
+        width: 350px;
+    }
+
+    /*footer{
+        width: 100%;
+    }*/
+
+}
