@@ -18,7 +18,6 @@ let cityName = newCity.replace("Italia", () => {
         fetch(url)
         .then((res) => res.json())
         .then((data) => editCard(data))     
-
     })
 })
 
@@ -42,7 +41,6 @@ const editCard = (data) => {
     const speedVal = document.querySelector(".speedVal");
 
     city.innerHTML = data.name;
-    //console.dir(city)
 
     if(city.textContent != "undefined"){
         weatherCity.style="display:block"
@@ -80,16 +78,6 @@ const editCard = (data) => {
             const dayHour = document.querySelector(".dayForecast");
             const imgForecast = document.querySelector(".imgDayForecast");
             const gradesForecast = document.querySelector(".gradesDayForecast");
-            
-            //const dayForecast = document.createElement("div");
-            //const dayHour = document.createElement("span");
-            //const imgForecast = document.createElement("img");
-            //const gradesForecast = document.createElement("span");
-
-            //dayForecast.className = "containerDayForecast"; 
-            //dayHour.className = "dayForecast";
-            //imgForecast.className = "imgDayForecast";
-            //gradesForecast.className = "gradesDayForecast";
 
             dayHour.innerHTML = data.list[i].dt_txt.substring(11,16)
             imgForecast.src = "http://openweathermap.org/img/w/" + data.list[i].weather[0].icon + ".png";
