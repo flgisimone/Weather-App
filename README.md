@@ -1,0 +1,1 @@
+Weather App realizzata in Javascript Vanilla utilizzando le API di OpenWeather
